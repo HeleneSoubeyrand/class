@@ -2,20 +2,20 @@ class TV {
     constructor(brand, channel, volume) {
         this.brand = brand 
         this.channel = 1
-        this.volume = 50
+        this.volume = 1
     }
 
-    augmentVolume(num) {
+    augmentVolume() {
         if (this.volume < 100) {
-            this.volume = this.volume + num
+            this.volume = this.volume + 1
         } else {
             this.volume = 100
         }
     }
 
-    decreaseVolume(num2) {
+    decreaseVolume() {
         if (this.volume > 0) {
-            this.volume = this.volume - num2
+            this.volume = this.volume - 1
         } else {
             this.volume = 0
         }
@@ -29,13 +29,27 @@ class TV {
         }
     }
 
+    reset() {
+        this.channel = 1
+        this.volume = 50
+    }
+
+    describe() {
+        console.log(`${this.brand} in on channel ${this.channel} and the volume is ${this.volume}`)
+    }
+
 }
 
 let samsung = new TV("Samsung", 0, 0)
+
 console.log(samsung)
-samsung.augmentVolume(55)
+samsung.decreaseVolume()
 console.log(samsung)
-samsung.changeChannel(45)
+samsung.decreaseVolume()
 console.log(samsung)
-samsung.changeChannel(-5)
+samsung.changeChannel(33)
+console.log(samsung)
+samsung.describe()
+console.log(samsung)
+samsung.reset()
 console.log(samsung)
