@@ -1,8 +1,8 @@
 class TV {
-    constructor(brand, channel, volume) {
+    constructor(brand) {
         this.brand = brand 
         this.channel = 1
-        this.volume = 1
+        this.volume = 50
     }
 
     augmentVolume() {
