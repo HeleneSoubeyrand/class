@@ -6,7 +6,7 @@ class TV {
     }
 
     increaseVolume() {
-        if (this.volume <= 100) {
+        if (this.volume < 100) {
             this.volume += 1
         } 
     }
@@ -14,15 +14,13 @@ class TV {
     decreaseVolume() {
         if (this.volume > 0) {
             this.volume -= 1
-        } ..
+        }
     }
 
     changeChannel(num) {
-        if ((num < 50) && (num > 0)) {
+        if (num < 50 && num > 0) {
             this.channel = num
-        } else {
-            this.channel = this.channel
-        }
+        } 
     }
 
     reset() {
