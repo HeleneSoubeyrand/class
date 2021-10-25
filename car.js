@@ -5,11 +5,11 @@ class Car {
     }
 
     accelerate(num) {
-        this.speed = this.speed + num 
+        this.speed += num 
     }
     
-    brake(num2) {
-        this.speed = this.speed - num2 
+    brake(num) {
+        this.speed -= num
     }
 
     describe() {
@@ -18,7 +18,7 @@ class Car {
 }
 
 let ford = new Car("Ford", 0)
-let mustang = new Car("Mustang", 100)
+let mustang = new Car("Mustang", 0)
 
 console.log(ford)
 ford.accelerate(50)

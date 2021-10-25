@@ -5,25 +5,21 @@ class TV {
         this.volume = 50
     }
 
-    augmentVolume() {
-        if (this.volume < 100) {
-            this.volume = this.volume + 1
-        } else {
-            this.volume = 100
-        }
+    increaseVolume() {
+        if (this.volume <= 100) {
+            this.volume += 1
+        } 
     }
 
     decreaseVolume() {
         if (this.volume > 0) {
-            this.volume = this.volume - 1
-        } else {
-            this.volume = 0
-        }
+            this.volume -= 1
+        } ..
     }
 
-    changeChannel(num3) {
-        if ((num3 < 50) && (num3 > 0)) {
-            this.channel = num3
+    changeChannel(num) {
+        if ((num < 50) && (num > 0)) {
+            this.channel = num
         } else {
             this.channel = this.channel
         }
